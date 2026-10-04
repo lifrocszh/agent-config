@@ -1,0 +1,15 @@
+# Informational CLI inventory only; no installer consumes this file.
+# WSL inventory remains pending until that environment is available.
+
+[macos]
+package_manager = "Homebrew"
+packages = ["bat", "eza", "fd", "fnm", "fzf", "gh", "git", "rustup", "shellcheck", "tmux", "uv", "zoxide"]
+
+[macos.bundled]
+commands = ["rg"]
+notes = "rg currently resolves to the Codex CLI bundled binary."
+
+[wsl]
+inventory_status = "pending"
+package_manager = "unknown"
+packages = []

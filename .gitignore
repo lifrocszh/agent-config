@@ -1,0 +1,10 @@
+.DS_Store
+**/auth.json
+**/.skill-lock.json
+**/models-store.json
+**/settings.json
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+**/history*.jsonl
+**/session*.jsonl
