@@ -1,0 +1,77 @@
+personality = "pragmatic"
+approvals_reviewer = "user"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+model = "gpt-6-sol"
+model_reasoning_effort = "low"
+[projects."/home/lifrocs/projects"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Y4S1/CS2105/Assignments/Assignment_0"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/rust-scraper"]
+trust_level = "trusted"
+
+[projects."/mnt/c/study/projects/rust-scraper"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/rindex"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/agentscope"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/logalyze"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/runlens"]
+trust_level = "trusted"
+
+[projects."/home/lifrocs"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/spreadsheet-engine"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/learn-rust"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/scout"]
+trust_level = "trusted"
+
+[projects."/mnt/c/study/projects/scout"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/Projects/pydantic-ai"]
+trust_level = "trusted"
+
+[projects."/home/lifrocs/projects/scout"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Users/lifro"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Study/projects/runlens"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "context-used", "five-hour-limit", "context-window-size"]
+status_line_use_colors = true
+screen_reader_detection_done = true
+
+[tui.model_availability_nux]
+gpt-6-astra = 4
+
+[features]
+prevent_idle_sleep = true
+
+[mcp_servers.playwright]
+command = "cmd.exe"
+args = ["/d", "/c", "C:\\Users\\lifro\\.codex\\playwright-brave.cmd"]

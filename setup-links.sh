@@ -35,11 +35,17 @@ link_path() {
 }
 
 link_path "$repo_dir/AGENTS.md" "$HOME/.codex/AGENTS.md" ".codex/AGENTS.md"
+if [ -n "${WSL_DISTRO_NAME:-}" ]; then
+  link_path "$repo_dir/home/.codex/config.wsl.toml" "$HOME/.codex/config.toml" ".codex/config.toml"
+fi
 link_path "$repo_dir/AGENTS.md" "$HOME/.pi/agent/AGENTS.md" ".pi/agent/AGENTS.md"
 link_path "$repo_dir/home/.agents/skills" "$HOME/.agents/skills" ".agents/skills"
 link_path "$repo_dir/home/.pi/agent/APPEND_SYSTEM.md" "$HOME/.pi/agent/APPEND_SYSTEM.md" ".pi/agent/APPEND_SYSTEM.md"
 link_path "$repo_dir/home/.pi/agent/agents" "$HOME/.pi/agent/agents" ".pi/agent/agents"
 link_path "$repo_dir/home/.pi/agent/prompts" "$HOME/.pi/agent/prompts" ".pi/agent/prompts"
+if [ -n "${WSL_DISTRO_NAME:-}" ]; then
+  link_path "$repo_dir/home/.pi/agent/settings.wsl.json" "$HOME/.pi/agent/settings.json" ".pi/agent/settings.json"
+fi
 link_path "$repo_dir/home/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
 
-printf 'Shared links ready. Merge Codex/Pi settings templates manually; no packages were installed.\n'
+printf 'Shared links ready. Merge Codex/Pi settings templates on non-WSL hosts; no packages were installed.\n'

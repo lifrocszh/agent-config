@@ -7,7 +7,7 @@ Personal, cross-workstation configuration source for Codex, Pi, shared skills, t
 - `AGENTS.md` is the shared base instruction file.
 - `home/.agents/skills/` contains the skills and their supporting files.
 - `home/.pi/agent/` contains Pi's shared prompt, agent, and system-addition files. `settings.shared.json` records shared preferences without machine identity fields.
-- `home/.codex/config.toml` records portable Codex defaults. The current live Codex config also has Mac-specific project, desktop, notification, plugin, and MCP settings; merge this baseline after reviewing each workstation's config.
+- `home/.codex/config.toml` records portable Codex defaults. `config.wsl.toml` records this WSL host's complete Codex config, including local project paths and MCP command.
 - `home/.tmux.conf` is the shared tmux config. Clipboard command switches between `pbcopy` on macOS and `clip.exe` when `WSL_DISTRO_NAME` is set.
 - `tools.toml` is a human-maintained inventory only. It installs, upgrades, and removes nothing. WSL entries await inventory.
 
@@ -21,9 +21,9 @@ cd "$HOME/agent-config"
 ./setup-links.sh
 ```
 
-`AGENTS.md` is linked into both Codex and Pi. `~/.agents/skills` is shared across compatible agents. The Pi agent definitions, prompts, system addition, and tmux config are linked directly.
+`AGENTS.md` is linked into both Codex and Pi. `~/.agents/skills` is shared across compatible agents. The Pi agent definitions, prompts, system addition, and tmux config are linked directly. On WSL, Codex and Pi settings also link to their WSL profiles. Existing files are backed up first.
 
-Merge `home/.codex/config.toml` into the local Codex config after reviewing host-specific entries. It is a portable baseline, not a complete replacement for the machine's Codex config. Merge `home/.pi/agent/settings.shared.json` into the local Pi `settings.json`, preserving its device ID and local settings. Do not copy authentication files or machine identity values into this repository.
+On macOS and other hosts, merge `home/.codex/config.toml` and `home/.pi/agent/settings.shared.json` into local settings after reviewing host-specific entries. WSL settings are fully repo-backed. Do not copy authentication files or machine identity values into this repository.
 
 After `git pull`, linked files update in place. Start a new Codex session, run `/reload` in Pi, and reload tmux with its configured `prefix+r` binding. `tools.toml` remains informational; install or update CLI tools manually for each operating system.
 
