@@ -6,7 +6,7 @@ Personal, cross-workstation configuration source for Codex, Pi, shared skills, t
 
 - `AGENTS.md` is the shared base instruction file.
 - `home/.agents/skills/` contains the skills and their supporting files.
-- `home/.pi/agent/` contains Pi's shared prompt, agent, and system-addition files. `settings.shared.json` records shared preferences without machine identity fields.
+- `home/.pi/agent/` contains Pi's system addition and settings profiles.
 - `home/.codex/config.toml` records portable Codex defaults. `config.wsl.toml` records this WSL host's complete Codex config, including local project paths and MCP command.
 - `home/.tmux.conf` is the shared tmux config. Clipboard command switches between `pbcopy` on macOS and `clip.exe` when `WSL_DISTRO_NAME` is set.
 - `tools.toml` is a human-maintained inventory only. It installs, upgrades, and removes nothing. WSL entries await inventory.
@@ -21,7 +21,7 @@ cd "$HOME/agent-config"
 ./setup-links.sh
 ```
 
-`AGENTS.md` is linked into both Codex and Pi. `~/.agents/skills` is shared across compatible agents. The Pi agent definitions, prompts, system addition, and tmux config are linked directly. On WSL, Codex and Pi settings also link to their WSL profiles. Existing files are backed up first.
+`AGENTS.md` is linked into both Codex and Pi. `~/.agents/skills` is shared across compatible agents. Pi's system addition and tmux config are linked directly. On WSL, Codex and Pi settings also link to their WSL profiles. Existing files are backed up first.
 
 On macOS and other hosts, merge `home/.codex/config.toml` and `home/.pi/agent/settings.shared.json` into local settings after reviewing host-specific entries. WSL settings are fully repo-backed. Do not copy authentication files or machine identity values into this repository.
 
