@@ -23,7 +23,7 @@ cd "$HOME/agent-config"
 
 `AGENTS.md` is linked into both Codex and Pi. `~/.agents/skills` is shared across compatible agents. Pi's system addition and tmux config are linked directly. On WSL, Codex and Pi settings also link to their WSL profiles. Existing files are backed up first.
 
-On macOS and other hosts, merge `home/.codex/config.toml` and `home/.pi/agent/settings.shared.json` into local settings after reviewing host-specific entries. WSL settings are fully repo-backed. Do not copy authentication files or machine identity values into this repository.
+On macOS and other hosts, merge `home/.codex/config.toml` and `home/.pi/agent/settings.shared.json` into local settings after reviewing host-specific entries. The shared Pi settings include the `npm:@everyx/pi-subagent` package spec; run `pi update --extensions` after syncing settings to install or update it. WSL settings are fully repo-backed. Do not copy authentication files or machine identity values into this repository.
 
 After `git pull`, linked files update in place. Start a new Codex session, run `/reload` in Pi, and reload tmux with its configured `prefix+r` binding. `tools.toml` remains informational; install or update CLI tools manually for each operating system.
 
