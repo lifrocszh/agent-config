@@ -11,6 +11,9 @@
   ],
   "theme": "dark",
   "packages": [
-    "npm:@everyx/pi-subagent"
+    "npm:@everyx/pi-subagent@1.4.0",
+    "npm:pi-openai-service-tier@0.1.4",
+    "npm:billion-context@0.1.204",
+    "npm:pi-web-access@0.41.0"
   ]
 }

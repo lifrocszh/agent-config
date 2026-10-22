@@ -41,6 +41,7 @@ fi
 link_path "$repo_dir/AGENTS.md" "$HOME/.pi/agent/AGENTS.md" ".pi/agent/AGENTS.md"
 link_path "$repo_dir/home/.agents/skills" "$HOME/.agents/skills" ".agents/skills"
 link_path "$repo_dir/home/.pi/agent/APPEND_SYSTEM.md" "$HOME/.pi/agent/APPEND_SYSTEM.md" ".pi/agent/APPEND_SYSTEM.md"
+link_path "$repo_dir/home/.pi/agent/extensions/pi-openai-service-tier.json" "$HOME/.pi/agent/extensions/pi-openai-service-tier.json" ".pi/agent/extensions/pi-openai-service-tier.json"
 if [ -n "${WSL_DISTRO_NAME:-}" ]; then
   link_path "$repo_dir/home/.pi/agent/settings.wsl.json" "$HOME/.pi/agent/settings.json" ".pi/agent/settings.json"
 fi
