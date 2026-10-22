@@ -44,6 +44,7 @@ link_path "$repo_dir/home/.pi/agent/APPEND_SYSTEM.md" "$HOME/.pi/agent/APPEND_SY
 if [ -n "${WSL_DISTRO_NAME:-}" ]; then
   link_path "$repo_dir/home/.pi/agent/settings.wsl.json" "$HOME/.pi/agent/settings.json" ".pi/agent/settings.json"
 fi
+link_path "$repo_dir/home/.pi/agent/models.json" "$HOME/.pi/agent/models.json" ".pi/agent/models.json"
 link_path "$repo_dir/home/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
 
 printf 'Shared links ready. Merge Codex/Pi settings templates on non-WSL hosts; no packages were installed.\n'

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "soclaas": {
+      "name": "SoCLaaS",
+      "baseUrl": "https://soclaas-api.comp.nus.edu.sg/v1",
+      "api": "openai-completions",
+      "apiKey": "$SOCLAAS_API_KEY",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "coding",
+          "name": "Coding via SoCLaaS",
+          "input": ["text", "image"],
+          "contextWindow": 131072,
+          "maxTokens": 16384,
+          "cost": { "input": 0.404351, "output": 2.365332, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "gemma4:26b",
+          "name": "Gemma 4 26B",
+          "input": ["text", "image"],
+          "contextWindow": 131072,
+          "maxTokens": 16384,
+          "cost": { "input": 0.102059, "output": 0.378588, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "llama3.1:8b",
+          "name": "Llama 3.1 8B",
+          "input": ["text", "image"],
+          "contextWindow": 65536,
+          "maxTokens": 16384,
+          "cost": { "input": 0.07425, "output": 0.08675, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "ornith1.5:35b",
+          "name": "Ornith 1.5 35B A3B",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.2, "output": 1.7, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "qwen3.5:9b",
+          "name": "Qwen 3.5 9B",
+          "input": ["text", "image"],
+          "contextWindow": 65536,
+          "maxTokens": 16384,
+          "cost": { "input": 0.114438, "output": 0.200438, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "qwen3.6:35b",
+          "name": "Qwen 3.6 35B A3B",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.41181, "output": 1.456571, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "qwen3.8:27b",
+          "name": "Qwen 3.8 27B",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.404351, "output": 2.365332, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "qwen3-coder-next",
+          "name": "Qwen 3 Coder Next 80B A3B",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.210357, "output": 1.040429, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "qwen3-vl:32b",
+          "name": "Qwen 3 VL 32B",
+          "input": ["text", "image"],
+          "contextWindow": 80000,
+          "maxTokens": 16384,
+          "cost": { "input": 0.104, "output": 0.416, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "x-test-1",
+          "name": "Testing GLM 5.3 Flash",
+          "input": ["text", "image"],
+          "contextWindow": 1048576,
+          "maxTokens": 16384,
+          "cost": { "input": 0.154672, "output": 0.50385, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "x-test-2",
+          "name": "Testing DeepSeek V4.1 Flash 1017",
+          "input": ["text", "image"],
+          "contextWindow": 1048576,
+          "maxTokens": 16384,
+          "cost": { "input": 0.245125, "output": 0.9305, "cacheRead": 0, "cacheWrite": 0 }
+        },
+        {
+          "id": "x-test-3",
+          "name": "Testing Qwen 3.8 Flash Next",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.1702, "output": 0.434, "cacheRead": 0, "cacheWrite": 0 }
+        }
+      ]
+    }
+  }
+}
